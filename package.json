@@ -1,0 +1,29 @@
+{
+  "name": "vk-media",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/electron-starter.js",
+  "homepage": "./",
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "build-css": "stylus -c src/static/stylus/ --out src/static/css",
+    "watch-css": "npm run build-css && stylus -c -w src/static/stylus/ --out src/static/css",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "nf start"
+  },
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "foreman": "^2.0.0",
+    "npm-run-all": "^4.1.3"
+  }
+}
